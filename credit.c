@@ -78,6 +78,11 @@ bool visa(long credit_card, int numdig)
        }
 
        }
+
+       else
+       {
+           return false;
+       }
 }
 
 
