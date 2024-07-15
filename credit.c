@@ -16,6 +16,7 @@ int main(void)
     int numdig = digit_no(credit);
     bool amex = av(credit,numdig);
     bool mast = vmaster(credit,numdig);
+    bool visa = visa(credit,numdig);
 
     if(digit_sum % 10 != 0)
     {
@@ -29,6 +30,10 @@ int main(void)
     else if(mast == true)
     {
         printf("Master Card\n");
+    }
+    else if(visa == true)
+    {
+        printf("Visa\n");
     }
 
 }
