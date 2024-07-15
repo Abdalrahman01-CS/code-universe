@@ -7,7 +7,7 @@ int main(void)
 {
     long credit = get_long("Credit Card: ");
     int digit_sum = digit(credit);
-     
+    printf("%i", )
 
 }
 
