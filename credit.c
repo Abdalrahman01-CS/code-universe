@@ -78,9 +78,9 @@ bool visa(long credit_card, int numdig)
        }
 
        }
-    }
-
 }
+
+
 
 int digit_no(long credit_card)
 {
