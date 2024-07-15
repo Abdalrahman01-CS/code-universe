@@ -58,6 +58,15 @@ bool vmaster(long credit_card, int numdig)
     }
 }
 
+bool visa(long credit_card, int numdig)
+{
+    if(numdig == 13)
+    {
+       int f_td = credit_card / pow(10,12);
+    }
+
+}
+
 int digit_no(long credit_card)
 {
     int coun = 0;
