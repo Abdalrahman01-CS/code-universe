@@ -11,9 +11,15 @@ int main(void)
 int digit(long credit_card)
 {
     int sum = 0;
+    bool alt_digit = false;
     while(credit_card > 0)
     {
+        if(alt_digit == true)
+        {
         int l_digit = credit_card % 10;
+        sum += l_digit;
+        }
+        alt_digit = ! alt_digit;
         credit_card/=10;
     }
     return sum;
