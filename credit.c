@@ -25,15 +25,15 @@ int main(void)
     }
     else if(amex == true)
     {
-        printf("Amex\n");
+        printf("AMEX\n");
     }
     else if(mast == true)
     {
-        printf("Master Card\n");
+        printf("MASTERCARD\n");
     }
     else if(visa == true)
     {
-        printf("Visa\n");
+        printf("VISA\n");
     }
     else
     {
