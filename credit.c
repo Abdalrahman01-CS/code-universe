@@ -3,17 +3,22 @@
 int digit(long credit_card);
 int m_s(int l_digit);
 int digit_no(long credit_card);
+bool av(long credit_card, int numdig)
 
 int main(void)
 {
     long credit = get_long("Credit Card: ");
     int digit_sum = digit(credit);
     int numdig = digit_no(credit);
-    printf("%i", numdig);
+    bool amex = av(credit,numdig);
     if(digit_sum % 10 != 0)
     {
         printf("INVALID\n");
         return 1;
+    }
+    else if(amex == true)
+    {
+        printf("Amex\n");
     }
 
 }
