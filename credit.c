@@ -71,7 +71,12 @@ bool visa(long credit_card, int numdig)
     }
        else if(numdig == 16)
        {
-               
+               int f_d = credit_card / pow(10,15);
+       if(f_d == 4)
+       {
+          return true;
+       }
+
        }
     }
 
