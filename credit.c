@@ -1,10 +1,13 @@
 #include <cs50.h>
 #include <stdio.h>
 int digit(long credit_card);
+int m_s(int l_digit);
+
 int main(void)
 {
     long credit = get_long("Credit Card: ");
     int digit_sum = digit(credit);
+    int proud = m_s(12);
 
 }
 
@@ -23,5 +26,18 @@ int digit(long credit_card)
         credit_card/=10;
     }
     return sum;
+}
+
+int m_s(int l_digit)
+{
+   int multiply = l_digit * 2;
+   int sum = 0;
+   while(multiply > 0)
+   {
+    int l_d_m = multiply % 10;
+    sum += l_d_m;
+    multiply /= 10;
+   }
+   return sum;
 }
 
