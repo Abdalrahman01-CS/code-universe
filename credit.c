@@ -8,6 +8,11 @@ int main(void)
     long credit = get_long("Credit Card: ");
     int digit_sum = digit(credit);
     printf("%i", digit_sum);
+    if(digit_sum % 10 != 0)
+    {
+        printf("INVALID\n");
+        return 1;
+    }
 
 }
 
@@ -22,6 +27,11 @@ int digit(long credit_card)
         int l_digit = credit_card % 10;
         int proud = m_s(l_digit);
         sum += proud;
+        }
+        else
+        {
+            int l_digit = credit_card % 10;
+            sum += l_digit;
         }
         alt_digit = ! alt_digit;
         credit_card/=10;
