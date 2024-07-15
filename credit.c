@@ -6,6 +6,7 @@ int digit(long credit_card);
 int m_s(int l_digit);
 int digit_no(long credit_card);
 bool av(long credit_card, int numdig)
+bool vmaster(long credit_card, int numdig);
 
 int main(void)
 {
@@ -13,6 +14,8 @@ int main(void)
     int digit_sum = digit(credit);
     int numdig = digit_no(credit);
     bool amex = av(credit,numdig);
+    bool mast = vmaster(credit,numdig);
+
     if(digit_sum % 10 != 0)
     {
         printf("INVALID\n");
@@ -22,6 +25,10 @@ int main(void)
     {
         printf("Amex\n");
     }
+    else if(mast == true)
+    {
+        printf("Master Card\n");
+    }
 
 }
 
@@ -29,6 +36,19 @@ bool av(long credit_card, int numdig)
 {
     int f_td = credit_card / pow(10,13);
     if((numdig == 15) && (f_td == 34 || f_td == 37))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool vmaster(long credit_card, int numdig)
+{
+    int f_td = credit_card / pow(10,14);
+    if((numdig == 16) && (f_td > 50 && f_td < 56))
     {
         return true;
     }
