@@ -5,7 +5,7 @@
 int digit(long credit_card);
 int m_s(int l_digit);
 int digit_no(long credit_card);
-bool av(long credit_card, int numdig)
+bool av(long credit_card, int numdig);
 bool vmaster(long credit_card, int numdig);
 bool visa(long credit_card, int numdig);
 
@@ -88,10 +88,9 @@ bool visa(long credit_card, int numdig)
 
        }
 
-       else
-       {
+
            return false;
-       }
+
 }
 
 
