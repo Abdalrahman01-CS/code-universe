@@ -4,9 +4,10 @@ int digit(long credit_card);
 int main(void)
 {
     long credit = get_long("Credit Card: ");
-    int digit_sum = 
+    int digit_sum = digit()
 
 }
+
 int digit(long credit_card)
 {
     int sum = 0;
