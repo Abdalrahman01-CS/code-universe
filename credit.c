@@ -2,12 +2,14 @@
 #include <stdio.h>
 int digit(long credit_card);
 int m_s(int l_digit);
+int digit_no(long credit_card);
 
 int main(void)
 {
     long credit = get_long("Credit Card: ");
     int digit_sum = digit(credit);
-    printf("%i", digit_sum);
+    int numdig = digit_no(credit);
+    printf("%i", numdig);
     if(digit_sum % 10 != 0)
     {
         printf("INVALID\n");
@@ -16,7 +18,16 @@ int main(void)
 
 }
 
-int digit_no(long credit)
+int digit_no(long credit_card)
+{
+    int coun = 0;
+    while(credit_card > 0)
+    {
+        coun++;
+        credit_card /= 10;
+    }
+    return coun;
+}
 
 int digit(long credit_card)
 {
