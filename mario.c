@@ -7,10 +7,7 @@ int main(void)
     {
           n = get_int("size: ");
     }
-    while (n < 1)
-    {
-        printf("")
-    }
+    while (n < 1);
 
     for(int i = 0; i < n; i++)
     {
