@@ -2,9 +2,10 @@
 #include <stdio.h>
 int main(void)
 {
+    int n;
     do
     {
-        int n = get_int("size: ");
+          n = get_int("size: ");
     }
     while (n < 1);
 
