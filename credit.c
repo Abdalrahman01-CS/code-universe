@@ -21,7 +21,7 @@ int digit(long credit_card)
         {
         int l_digit = credit_card % 10;
         int proud = m_s(l_digit);
-        sum += l_digit;
+        sum += proud;
         }
         alt_digit = ! alt_digit;
         credit_card/=10;
