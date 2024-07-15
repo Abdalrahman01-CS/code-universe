@@ -21,7 +21,7 @@ int main(void)
     if(digit_sum % 10 != 0)
     {
         printf("INVALID\n");
-        return 1;
+        return 0;
     }
     else if(amex == true)
     {
@@ -38,7 +38,7 @@ int main(void)
     else
     {
         printf("INVALID\n");
-        return 1;
+        return 0;
     }
 
 }
