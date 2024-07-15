@@ -7,6 +7,7 @@ int m_s(int l_digit);
 int digit_no(long credit_card);
 bool av(long credit_card, int numdig)
 bool vmaster(long credit_card, int numdig);
+bool visa(long credit_card, int numdig);
 
 int main(void)
 {
@@ -67,10 +68,10 @@ bool visa(long credit_card, int numdig)
        {
           return true;
        }
-
+    }
        else if(numdig == 16)
        {
-
+               
        }
     }
 
