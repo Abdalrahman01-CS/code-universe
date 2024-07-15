@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-int add(1,1);
+int add(int a,int b);
 int main(void)
 {
     int x = get_int("x: ");
@@ -11,5 +11,5 @@ int main(void)
 
 int add(int a,int b)
 {
-printf("%i\n",x+y);
+    printf("%i\n",x+y);
 }
