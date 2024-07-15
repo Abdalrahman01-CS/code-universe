@@ -7,7 +7,7 @@ int main(void)
 {
     long credit = get_long("Credit Card: ");
     int digit_sum = digit(credit);
-    int proud = m_s(12);
+     
 
 }
 
@@ -20,6 +20,7 @@ int digit(long credit_card)
         if(alt_digit == true)
         {
         int l_digit = credit_card % 10;
+        int proud = m_s(l_digit);
         sum += l_digit;
         }
         alt_digit = ! alt_digit;
