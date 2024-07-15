@@ -18,6 +18,19 @@ int main(void)
 
 }
 
+bool av(long credit_card, int numdig)
+{
+    int f_td = credit_card / pow(10,13);
+    if((numdig == 15) && (f_td == 34 || f_td == 37))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 int digit_no(long credit_card)
 {
     int coun = 0;
