@@ -16,6 +16,8 @@ int main(void)
 
 }
 
+int digit_no(long credit)
+
 int digit(long credit_card)
 {
     int sum = 0;
