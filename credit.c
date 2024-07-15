@@ -7,7 +7,7 @@ int m_s(int l_digit);
 int digit_no(long credit_card);
 bool av(long credit_card, int numdig);
 bool vmaster(long credit_card, int numdig);
-bool visa(long credit_card, int numdig);
+bool vvisa(long credit_card, int numdig);
 
 int main(void)
 {
@@ -16,7 +16,7 @@ int main(void)
     int numdig = digit_no(credit);
     bool amex = av(credit,numdig);
     bool mast = vmaster(credit,numdig);
-    bool visa = visa(credit,numdig);
+    bool visa = vvisa(credit,numdig);
 
     if(digit_sum % 10 != 0)
     {
@@ -68,7 +68,7 @@ bool vmaster(long credit_card, int numdig)
     }
 }
 
-bool visa(long credit_card, int numdig)
+bool vvisa(long credit_card, int numdig)
 {
     if(numdig == 13)
     {
