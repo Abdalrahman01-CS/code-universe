@@ -9,7 +9,7 @@ int main(void)
     printf("%i\n",x+y);
 }
 
-int add(int a,int b)
+int add(int a,)
 {
 
 }
