@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
+
 int digit(long credit_card);
 int m_s(int l_digit);
 int digit_no(long credit_card);
