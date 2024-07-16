@@ -1,14 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int number(int num);
+int h(int num);
 int main (void)
 {
      int n = get_int("Height: ");
-     number(n);
+     printf(h(n));
 }
 
-void number(int num)
+void h(int num)
 {
     for(int i = 0; i < num; i++)
     {
