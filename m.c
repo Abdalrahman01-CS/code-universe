@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void h(int num);
+void h(int space , int num);
 int main (void)
 {
      int n = get_int("Height: ");
@@ -12,7 +12,7 @@ int main (void)
 
 }
 
-void h(int num)
+void h(int space , int num)
 {
     for(int i = 0; i < num; i++)
     {
