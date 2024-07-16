@@ -5,7 +5,7 @@ int h(int num);
 int main (void)
 {
      int n = get_int("Height: ");
-     printf(h(n));
+     printf ;
 }
 
 void h(int num)
