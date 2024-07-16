@@ -1,11 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int h(int num);
+void h(int num);
 int main (void)
 {
      int n = get_int("Height: ");
-     h(4);
+     h(n);
 }
 
 void h(int num)
@@ -14,7 +14,7 @@ void h(int num)
     {
         for(int j = 0; j < num; j++)
         {
-            printf("#\n");
+            printf("#");
         }
 
         printf("\n");
