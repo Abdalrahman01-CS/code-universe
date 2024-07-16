@@ -1,6 +1,8 @@
+#include <cs50.h>
 #include <stdio.h>
 
 void print_coulmn(int height);
+
 int main(void)
 {
     int n = get_int("Height: ");
@@ -10,7 +12,7 @@ int main(void)
 
 void print_coulmn(int height)
 {
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i <= height; i++)
     {
         printf("#\n");
     }
