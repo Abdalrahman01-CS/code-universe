@@ -1,10 +1,18 @@
 #include <stdio.h>
 
+void print_coulmn(int height);
 int main(void)
 {
-    for (int i = 0; i < 3; i++)
+    int n = get_int("Height: ");
+    print_coulmn(n);
+
+}
+
+void print_coulmn(int height)
+{
+    for (int i = 0; i < height; i++)
     {
-        printf("i is %i\n", i);
         printf("#\n");
     }
+
 }
