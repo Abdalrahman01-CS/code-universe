@@ -5,9 +5,10 @@ int number(int num);
 int main (void)
 {
      int n = get_int("Height: ");
-}    number(int n);
+     number(n);
+}
 
-int number(int num)
+void number(int num)
 {
     for(int i = 0; i < num; i++)
     {
