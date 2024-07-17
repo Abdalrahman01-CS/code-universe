@@ -3,6 +3,6 @@
 
 int main(void)
 {
-     char words[][] = {{'H','I','!'} , {'B','Y','E','!'}};
-     printf("%c\n",words[0]);
+     char words[3][3] = {{'H','I','!','0'} , {'B','Y','E','!','0'}};
+     printf("%c\n",words[0][0]);
 }
