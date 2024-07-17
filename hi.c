@@ -3,9 +3,6 @@
 
 int main(void)
 {
-    string  words[2];
-    words[0] = "HI!";
-    words[1] = "BYE!";
-
-    printf("%s %s\n", words[0] , words[1]);
+     char words[][] = {{'H','I','!'} , {'B','Y','E','!'}};
+     printf("%c\n",words[0]);
 }
