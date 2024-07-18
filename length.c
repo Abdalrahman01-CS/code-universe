@@ -5,7 +5,7 @@ int main(void)
 {
     string name = get_string("Name: ");
 
-    int n = 0;
+    int n = 1;
     while (name[n] != '\0')
     {
         n++;
