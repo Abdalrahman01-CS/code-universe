@@ -1,22 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
-
-int s_length(string s);
+#include <string.h>
 
 int main(void)
 {
     string name = get_string("Name: ");
-    int length = s_length(name);
+    int length = strlen(name);
     printf("%i\n", length);
 
-}
-
-int s_length(string s)
-{
-    int n = 0;
-    while (s[n] != '\0')
-    {
-        n++;
-    }
-    return n;
 }
