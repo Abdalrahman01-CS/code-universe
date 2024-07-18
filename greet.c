@@ -2,6 +2,5 @@
 #include <stdio.h>
 int main(int argc, string argv[])
 {
-    const int a = 5;
-    printf("hello, %i\n", a);
+    printf("hello, %s\n", argv[1]);
 }
