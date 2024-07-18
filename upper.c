@@ -8,6 +8,9 @@ int main(void)
     printf("After:  ");
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (s[i] >= 97 )
+        if (s[i] >= 97 && s[i] <= 97+32)
+        {
+            s[i] -= 32;
+        }
     }
 }
