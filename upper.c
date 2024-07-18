@@ -13,5 +13,10 @@ int main(void)
             s[i] -= 32;
             printf("%c", s[i]);
         }
+        else
+        {
+            printf("%c", s[i]);
+        }
     }
+    printf("\n");
 }
