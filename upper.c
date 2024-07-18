@@ -11,6 +11,7 @@ int main(void)
         if (s[i] >= 97 && s[i] <= 97+32)
         {
             s[i] -= 32;
+            printf("%s", s);
         }
     }
 }
