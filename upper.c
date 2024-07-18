@@ -8,6 +8,6 @@ int main(void)
     printf("After:  ");
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (s[i] )
+        if (s[i] >= 97 )
     }
 }
