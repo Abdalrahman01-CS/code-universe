@@ -11,7 +11,7 @@ int main(void)
     {
         if (s[i] >= 'a' && s[i] <= 'z')
         {
-            s[i] -= ('a'-'A');
+            s[i] = toupper(s[i]);
             printf("%c", s[i]);
         }
         else
