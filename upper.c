@@ -8,7 +8,7 @@ int main(void)
     printf("After:  ");
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (s[i] >= 97 && s[i] <= 129)
+        if (s[i] >= 'a' && s[i] <= 'z')
         {
             s[i] -= 32;
             printf("%c", s[i]);
