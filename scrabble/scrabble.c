@@ -41,7 +41,7 @@ int compute_score(string word)
     // Compute score for each character
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-            toupper(word);
+            toupper(word[i]);
             score += POINTS[word[i] - 'A'];
 
     }
