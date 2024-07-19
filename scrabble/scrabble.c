@@ -37,15 +37,19 @@ int compute_score(string word)
 {
     // Keep track of score
     int score = 0;
-    toupper(word);
+
     // Compute score for each character
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-
-
+        if (isupper(word[i]))
+        {
             score += POINTS[word[i] - 'A'];
-
-     }
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
+        }
+    }
 
     return score;
 }
