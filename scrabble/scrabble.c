@@ -38,7 +38,7 @@ int compute_score(string word)
 {
     // Keep track of score
     int score = 0;
-toupper(word[i]);
+toupper(word);
     // Compute score for each character
     for (int i = 0, len = strlen(word); i < len; i++)
     {
