@@ -37,10 +37,20 @@ int count_words(string text)
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == " ")
+        {
+        c++;
+        }
     }
+    return c + 1;
 }
 
 int count_sentences(string text)
 {
     // Return the number of sentences in text
+    int co = 0;
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        if (text[i] == "\0")
+        c++;
+    }
 }
