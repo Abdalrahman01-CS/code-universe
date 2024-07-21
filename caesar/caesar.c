@@ -1,8 +1,8 @@
 #include <cs50.h>
 #include <ctype.h>
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -21,29 +21,26 @@ int main(int argc, string argv[])
         }
     }
 
-        int knum = atoi(argv[1]);
-        string plaintext = get_string("Plaintext: ");
-        printf("Ciphertext: ");
+    int knum = atoi(argv[1]);
+    string plaintext = get_string("Plaintext: ");
+    printf("Ciphertext: ");
 
-        for (int j = 0, m = strlen(plaintext); j < m; j++)
+    for (int j = 0, m = strlen(plaintext); j < m; j++)
+    {
+        if (isupper(plaintext[j]))
         {
-            if (isupper(plaintext[j]))
-            {
-                printf("%c", (plaintext[j] - 65 + knum) % 26 + 65);
-            }
-
-            else if (islower(plaintext[j]))
-            {
-                printf("%c", (plaintext[j] - 97 + knum) % 26 + 97);
-            }
-
-            else
-            {
-                printf("%c", plaintext[j]);
-            }
-
+            printf("%c", (plaintext[j] - 65 + knum) % 26 + 65);
         }
-        printf("\n");
 
+        else if (islower(plaintext[j]))
+        {
+            printf("%c", (plaintext[j] - 97 + knum) % 26 + 97);
+        }
 
+        else
+        {
+            printf("%c", plaintext[j]);
+        }
+    }
+    printf("\n");
 }
