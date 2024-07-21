@@ -58,7 +58,7 @@ int count_words(string text)
     int w = 1;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] == " ")
+        if (text[i] == ' ')
         {
         w++;
         }
@@ -76,6 +76,6 @@ int count_sentences(string text)
         {
         s++;
         }
-        return s;
     }
+    return s;
 }
