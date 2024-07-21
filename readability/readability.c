@@ -57,7 +57,9 @@ int count_sentences(string text)
     int s = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] == "\0")
+        if (text[i] == '.' || text[i] == '?' || text[i] == '!')
+        {
         s++;
+        }
     }
 }
