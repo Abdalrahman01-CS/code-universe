@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 
         for (int j = 0, m = strlen(plaintext); j < m; j++)
         {
-            
+            printf("%c", plaintext[j] + k);
         }
     }
 
