@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -19,7 +19,8 @@ int main(void)
     int sentences = count_sentences(text);
 
     // Compute the Coleman-Liau index
-    int index = round (0.0588 * (float) letters / (float) words * 100 - 0.296 * (float) sentences / (float) words * 100 - 15.8);
+    int index = round(0.0588 * (float) letters / (float) words * 100 -
+                      0.296 * (float) sentences / (float) words * 100 - 15.8);
 
     // Print the grade level
     if (index < 1)
@@ -60,7 +61,7 @@ int count_words(string text)
     {
         if (text[i] == ' ')
         {
-        w++;
+            w++;
         }
     }
     return w;
@@ -74,7 +75,7 @@ int count_sentences(string text)
     {
         if (text[i] == '.' || text[i] == '?' || text[i] == '!')
         {
-        s++;
+            s++;
         }
     }
     return s;
