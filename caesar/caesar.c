@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, string argv[])
 {
@@ -18,5 +19,15 @@ int main(int argc, string argv[])
             printf("Usage: ./caesar KEY");
             return 1;
         }
+
+        int knum = atoi(argv[1]);
+        string plaintext = get_string("Plaintext: ");
+        printf("Ciphertext: ");
+
+        for (int j = 0, m = strlen(plaintext); j < m; j++)
+        {
+            
+        }
     }
+
 }
