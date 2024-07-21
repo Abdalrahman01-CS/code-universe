@@ -26,7 +26,11 @@ int main(int argc, string argv[])
 
         for (int j = 0, m = strlen(plaintext); j < m; j++)
         {
-            printf(("%c", plaintext[j] - 65 + knum) % 26 + 65);
+            if (isupper(plaintext[j]))
+            {
+                printf(("%c", plaintext[j] - 65 + knum) % 26 + 65);
+            }
+
         }
     }
 
