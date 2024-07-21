@@ -19,6 +19,7 @@ int main(int argc, string argv[])
             printf("Usage: ./caesar KEY");
             return 1;
         }
+    }
 
         int knum = atoi(argv[1]);
         string plaintext = get_string("Plaintext: ");
@@ -42,6 +43,7 @@ int main(int argc, string argv[])
             }
 
         }
-    }
+        printf("\n");
+
 
 }
