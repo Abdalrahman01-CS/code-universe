@@ -29,12 +29,12 @@ int main(int argc, string argv[])
         {
             if (isupper(plaintext[j]))
             {
-                printf(("%c", plaintext[j] - 65 + knum) % 26 + 65);
+                printf("%c", (plaintext[j] - 65 + knum) % 26 + 65);
             }
 
             else if (islower(plaintext[j]))
             {
-                printf(("%c", plaintext[j] - 97 + knum) % 26 + 97);
+                printf("%c", (plaintext[j] - 97 + knum) % 26 + 97);
             }
 
             else
