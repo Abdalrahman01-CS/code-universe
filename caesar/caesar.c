@@ -31,6 +31,11 @@ int main(int argc, string argv[])
                 printf(("%c", plaintext[j] - 65 + knum) % 26 + 65);
             }
 
+            else if (islower(plaintext[j]))
+            {
+                printf(("%c", plaintext[j] - 97 + knum) % 26 + 97);
+            }
+
         }
     }
 
