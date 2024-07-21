@@ -40,24 +40,24 @@ int count_letters(string text)
 int count_words(string text)
 {
     // Return the number of words in text
-    int c = 1;
+    int w = 1;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == " ")
         {
-        c++;
+        w++;
         }
     }
-    return c;
+    return w;
 }
 
 int count_sentences(string text)
 {
     // Return the number of sentences in text
-    int co = 0;
+    int s = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == "\0")
-        c++;
+        s++;
     }
 }
