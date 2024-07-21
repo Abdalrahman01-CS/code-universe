@@ -40,7 +40,7 @@ int count_letters(string text)
 int count_words(string text)
 {
     // Return the number of words in text
-    int c = 0;
+    int c = 1;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == " ")
@@ -48,7 +48,7 @@ int count_words(string text)
         c++;
         }
     }
-    return c + 1;
+    return c;
 }
 
 int count_sentences(string text)
