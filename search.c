@@ -13,9 +13,7 @@ int main(void)
             printf("Found\n");
             return true;
         }
-        else
-        {
-            printf("Not found\n");
-        }
+
     }
+    printf("Not found\n");
 }
