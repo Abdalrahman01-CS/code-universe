@@ -8,7 +8,7 @@ int main(void)
     int n = get_int("Number: ");
     for (int i = 0; i < 7; i++)
     {
-        if(number[i] == n)
+        if(numbers[i] == n)
         {
             printf("Found\n");
             return true;
