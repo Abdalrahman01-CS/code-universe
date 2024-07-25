@@ -10,7 +10,13 @@ int main(void)
 
 void draw(int n)
 {
+     // Print pyramid of height n - 1
      draw(n - 1);
 
-     
+     // Print one more row
+     for (int i = 0; i < n; i++)
+     {
+        printf("#");
+     }
+     printf("\n");
 }
