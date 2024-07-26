@@ -1,11 +1,11 @@
-sort1 uses:
+sort1 uses: Selection sort
 
 How do you know?: Take 0.106s to sort sorted list; Take 0.206s to sort random list;
 
-sort2 uses:  Todo
+sort2 uses:  Merge sort
 
 How do you know?: Take 0.068s to sort sorted list; Take 0.001s to sort random list;
 
-sort3 uses: TODO
+sort3 uses: Bubble sort
 
 How do you know?: Take 0.171s to sort sorted list; Take 0.150s to sort random list;
