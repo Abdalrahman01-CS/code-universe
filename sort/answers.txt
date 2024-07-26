@@ -2,10 +2,10 @@ sort1 uses:
 
 How do you know?: Take 0.106s to sort sorted list; Take 0.206s to sort random list;
 
-sort2 uses: Take 
+sort2 uses:  Todo
 
-How do you know?: TODO
+How do you know?: Take 0.068s to sort sorted list; Take 0.001s to sort random list;
 
 sort3 uses: TODO
 
-How do you know?: TODO
+How do you know?: Take 0.171s to sort sorted list; Take 0.001s to sort random list;
