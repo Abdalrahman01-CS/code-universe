@@ -8,4 +8,4 @@ How do you know?: Take 0.068s to sort sorted list; Take 0.001s to sort random li
 
 sort3 uses: TODO
 
-How do you know?: Take 0.171s to sort sorted list; Take 0.001s to sort random list;
+How do you know?: Take 0.171s to sort sorted list; Take 0.150s to sort random list;
