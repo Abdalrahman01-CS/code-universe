@@ -1,6 +1,6 @@
-sort1 uses: TODO
+sort1 uses: selction sort
 
-How do you know?: TODO
+How do you know?: Take 
 
 sort2 uses: TODO
 
