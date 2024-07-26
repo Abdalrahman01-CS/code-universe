@@ -92,5 +92,12 @@ void print_winner(void)
 
 
     // Print the candidate (or candidates) with maximum votes
+    for (int j = 0; j < MAX; j++)
+    {
+        if (candidates[i].votes == h)
+        {
+            printf("%s\n", candidates[i].name);
+        }
+    }
     return;
 }
