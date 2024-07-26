@@ -68,7 +68,11 @@ bool vote(string name)
     // TODO
     for (int i = 0, n = strlen(name); i < n; i++)
     {
-        if (strcmp())
+        if (strcmp(argv[i],name) == 0)
+        {
+            votes++;
+        }
+        return true;
     }
     return false;
 }
