@@ -1,8 +1,8 @@
-sort1 uses: selction sort
+sort1 uses:
 
-How do you know?: Take 0.106s to sort sorted list
+How do you know?: Take 0.106s to sort sorted list; Take 0.206s to sort random list;
 
-sort2 uses: TODO
+sort2 uses: Take 
 
 How do you know?: TODO
 
