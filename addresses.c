@@ -1,9 +1,8 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-     string s = "HI!";
-     printf("%p\n", s);
-     printf("%p\n", &s[1]);
+     char *s = "HI!";
+     printf("%s\n", s);
+     
 }
