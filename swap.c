@@ -11,3 +11,13 @@ int main(void)
     swap(x, y);
     printf("x is %i, y is %i\n", x, y);
 }
+
+void swap(int a, int b)
+{
+    int temp;
+    temp = b;
+    b = a;
+    a = temp;
+
+
+}
