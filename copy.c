@@ -22,7 +22,7 @@ int main(void)
     {
         return 2;
     }
-    
+
     for (int i = 0, n = strlen(s); i <= n; i++)
     {
         t[i] = s[i];
@@ -35,4 +35,8 @@ int main(void)
 
     printf("%s\n", s);
     printf("%s\n", t);
+
+    free(t);
+
+    return 0;
 }
