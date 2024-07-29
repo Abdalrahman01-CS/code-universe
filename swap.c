@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void swap(int *a, int *b);
 
@@ -10,6 +11,8 @@ int main(void)
     printf("x is %i, y is %i\n", x, y);
     swap(&x, &y);
     printf("x is %i, y is %i\n", x, y);
+
+    free(x);
 }
 
 void swap(int *a, int *b)
