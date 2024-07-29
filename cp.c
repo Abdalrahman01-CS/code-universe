@@ -10,5 +10,11 @@ int main(int argc, char *argv[])
 
     by b;
 
-    while (fread(&b, ))
+    while (fread(&b, sizeof(b), 1, src) != 0)
+    {
+        fwrite(&b, sizeof(b), 1, dst);
+    }
+
+    fclose(src);
+    fclose(dst);
 }
