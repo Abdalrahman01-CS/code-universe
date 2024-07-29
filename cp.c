@@ -15,6 +15,6 @@ int main(int argc, char *argv[])
         fwrite(&b, sizeof(b), 1, dst);
     }
 
-    fclose(src);
     fclose(dst);
+    fclose(src);
 }
