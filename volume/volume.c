@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     fwrite(header_buffer, sizeof(header_buffer), HEADER_SIZE, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    while(fread(&buffer, sizeof(buffer), 1, input) != 0)
+    while(fread(&buffer, sizeof(buffer), 1, input) == 1)
     {
         buffer *= factor;
         fwrite(&buffer, sizeof(buffer), 1, output);
