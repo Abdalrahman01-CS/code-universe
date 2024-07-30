@@ -1,11 +1,12 @@
 // Modifies the volume of an audio file
-
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
+
+typedef uint8_t header_buffer[HEADER_SIZE];
 
 int main(int argc, char *argv[])
 {
@@ -34,8 +35,11 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
+    fread(header_buffer, sizeof(header_buffer), HEADER_SIZE, input);
+    fwrite(header_buffer, sizeof(header_buffer), HEADER_SIZE, output);
 
     // TODO: Read samples from input file and write updated data to output file
+    int_
 
     // Close files
     fclose(input);
