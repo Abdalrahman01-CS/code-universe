@@ -7,7 +7,7 @@
 const int HEADER_SIZE = 44;
 
 uint8_t header_buffer[HEADER_SIZE];
-uint16_t buffer;
+uint16_t b;
 
 int main(int argc, char *argv[])
 {
@@ -40,10 +40,10 @@ int main(int argc, char *argv[])
     fwrite(header_buffer, sizeof(header_buffer), HEADER_SIZE, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    while(fread(&buffer, sizeof(buffer), 1, input) != 0)
+    while(fread(&b, sizeof(b), 1, input) != 0)
     {
-        buffer *= factor;
-        fwrite(&buffer, sizeof(buffer), 1, output);
+        b *= factor;
+        fwrite(&b, sizeof(b), 1, output);
     }
 
 
