@@ -7,6 +7,7 @@
 const int HEADER_SIZE = 44;
 
 typedef uint8_t header_buffer[HEADER_SIZE];
+typedef uint16_t buffer;
 
 int main(int argc, char *argv[])
 {
@@ -39,7 +40,12 @@ int main(int argc, char *argv[])
     fwrite(header_buffer, sizeof(header_buffer), HEADER_SIZE, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    int_
+    while(fread(&buffer, sizeof(buffer), 1, input) != 0)
+    {
+        buffer *= factor;
+        fwrite(buffer, sizeof(buffer), 1, output);
+    }
+
 
     // Close files
     fclose(input);
