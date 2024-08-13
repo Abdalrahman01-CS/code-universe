@@ -19,7 +19,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    int sepiaRed, sepiaGreen,sepiaBlue;
+    float sepiaRed, sepiaGreen,sepiaBlue;
     for(int i = 0;i<height; i++)
     {
         for(int j = 0;j<width; j++)
@@ -40,9 +40,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 sepiaBlue=255;
             }
 
-            image[i][j].rgbtRed=sepiaRed;
-            image[i][j].rgbtGreen=sepiaGreen;
-            image[i][j].rgbtBlue=sepiaBlue;
+            image[i][j].rgbtRed=round(sepiaRed);
+            image[i][j].rgbtGreen=round(sepiaGreen);
+            image[i][j].rgbtBlue=round(sepiaBlue);
 
         }
     }
@@ -83,7 +83,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for(int up_dated_j=j-1;   up_dated_j < j+2;  up_dated_j++)
                 {
-                    if(up_dated_i>0&&up_dated_j>0&&up_dated_i<height&&up_dated_j<width)
+                    if(up_dated_i>=0&&up_dated_j>=0&&up_dated_i<height&&up_dated_j<width)
                     {
                          sr+=image[up_dated_i][up_dated_j].rgbtRed;
                          sg+=image[up_dated_i][up_dated_j].rgbtGreen;
