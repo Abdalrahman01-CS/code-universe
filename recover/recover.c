@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *raw_f = fopen(argv[1], "r");
-    uint_8 buffer[512];
+    uint8_t buffer[512];
     bool  found_jpeg; //false
     int c = 0;
     char file_name[8];
