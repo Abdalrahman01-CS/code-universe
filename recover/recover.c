@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+//#include <stdbool.h>
 
 int main(int argc, char *argv[])
 {
@@ -11,15 +12,36 @@ int main(int argc, char *argv[])
     FILE *raw_f = fopen(argv[1], "r");
     uint_8 buffer[512];
     bool  found_jpeg; //false
+    int c = 0;
+    char file_name[8];
+    FILE *img = NULL;
     while(fread(buffer,1,512,raw_f))
     {
         if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             found_jpeg = true;
         }
-        else //delete
+        if (found_jpeg == true)
         {
-            found_jpeg = false;
+            if(c == 0)
+            {
+                sprintf(file_name, "%03i.jpg", c);
+                img = fopen(file_name, "w");
+                fwrite(buffer, 1, 512, img);
+                found_jpeg = false;
+                c++;
+
+            }
+            else
+            {
+                fclose(img);
+                sprintf(file_name, "%03i.jpg", c);
+                 img = fopen(file_name, "w");
+                 fwrite(buffer, 1, 512, img);
+                 found_jpeg = false;
+                 c++;
+
+            }
         }
     }
 }
