@@ -35,8 +35,12 @@ int main(int argc, char *argv[])
                 found_jpeg = false;
                 c++;
 
-            
 
+
+        }
+        else if(c!=0)
+        {
+            fwrite(buffer, 1, 512, img);
         }
     }
 }
