@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     }
     FILE *raw_f = fopen(argv[1], "r");
     uint8_t buffer[512];
-    bool  found_jpeg; //false
+    bool  found_jpeg = false; 
     int c = 0;
     char file_name[8];
     FILE *img = NULL;
