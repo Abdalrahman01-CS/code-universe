@@ -23,25 +23,20 @@ int main(int argc, char *argv[])
         }
         if (found_jpeg == true)
         {
-            if(c == 0)
+
+            if(c != 0)
             {
+                fclose(img);
+            }
+
                 sprintf(file_name, "%03i.jpg", c);
                 img = fopen(file_name, "w");
                 fwrite(buffer, 1, 512, img);
                 found_jpeg = false;
                 c++;
 
-            }
-            else
-            {
-                fclose(img);
-                sprintf(file_name, "%03i.jpg", c);
-                 img = fopen(file_name, "w");
-                 fwrite(buffer, 1, 512, img);
-                 found_jpeg = false;
-                 c++;
+            
 
-            }
         }
     }
 }
