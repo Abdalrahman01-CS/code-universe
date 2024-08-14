@@ -1,7 +1,7 @@
+#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
-#include <stdbool.h>
 
 int main(int argc, char *argv[])
 {
@@ -15,30 +15,28 @@ int main(int argc, char *argv[])
     int c = 0;
     char file_name[8];
     FILE *img = NULL;
-    while(fread(buffer,1,512,raw_f))
+    while (fread(buffer, 1, 512, raw_f))
     {
-        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
         {
             found_jpeg = true;
         }
         if (found_jpeg == true)
         {
 
-            if(c != 0)
+            if (c != 0)
             {
                 fclose(img);
             }
 
-                sprintf(file_name, "%03i.jpg", c);
-                img = fopen(file_name, "w");
-                fwrite(buffer, 1, 512, img);
-                found_jpeg = false;
-                c++;
-
-
-
+            sprintf(file_name, "%03i.jpg", c);
+            img = fopen(file_name, "w");
+            fwrite(buffer, 1, 512, img);
+            found_jpeg = false;
+            c++;
         }
-        else if(c!=0)
+        else if (c != 0)
         {
             fwrite(buffer, 1, 512, img);
         }
