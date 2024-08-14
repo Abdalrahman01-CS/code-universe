@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        return 1
+        return 1;
     }
     FILE *raw_f = fopen(argv[1], "r");
     uint_8 buffer[512];
@@ -44,5 +44,6 @@ int main(int argc, char *argv[])
         }
     }
     fclose(img);
+
     fclose(raw_f);
 }
