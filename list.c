@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
 
     for (int i = 1; i < argc; i++)
     {
-        printf("%s\n", argv[i]);
+        int number = atoi(argv[i]);
+        printf("%i\n", number);
     }
 }
 
