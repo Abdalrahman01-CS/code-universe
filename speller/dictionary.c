@@ -1,5 +1,6 @@
 // Implements a dictionary's functionality
-
+#include<stdlib.h>
+#include<string.h>
 #include<stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
@@ -26,10 +27,19 @@ bool check(const char *word)
 {
     // TODO
     int hash_value=hash(word);
-    while(true)
+    node *cursor=table[hash_value];
+    while(cursor!=NULL)
     {
-        node *cursor=table[hash_value];
-        if (cursor)
+
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+        else
+        {
+            cursor = cursor->next;
+
+        }
     }
     return false;
 }
@@ -79,5 +89,15 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < N; i++)
+    {
+        node *tmp=table[i];
+        node *cursor=table[i];
+        while(cursor!=NULL)
+        {
+cursor= cursor->next;
+free(tmp);
+        }
+    }
+    return true;
 }
