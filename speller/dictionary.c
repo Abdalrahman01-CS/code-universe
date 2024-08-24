@@ -48,6 +48,7 @@ bool load(const char *dictionary)
    {
         node *word = malloc(sizeof(node));
         int hash_value=hash(buffer);
+        word
    }
     return false;
 }
