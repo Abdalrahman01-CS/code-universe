@@ -1,5 +1,6 @@
 // Implements a dictionary's functionality
 
+#include<stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
 
@@ -37,6 +38,11 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *dict_file=fopen(dictionary, "r");
+    if (dict_file == NULL)
+    {
+        printf("was not able to open dictionary\n");
+        return false;
+    }
     return false;
 }
 
