@@ -43,6 +43,12 @@ bool load(const char *dictionary)
         printf("was not able to open dictionary\n");
         return false;
     }
+    char buffer[45];
+   while (fscanf(dict_file, "%s", buffer))
+   {
+        node *word = malloc(sizeof(node));
+        int hash_value=hash(buffer);
+   }
     return false;
 }
 
