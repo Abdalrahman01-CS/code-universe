@@ -86,20 +86,4 @@ unsigned int size(void)
     return num_words;
 }
 
-// Unloads dictionary from memory, returning true if successful, else false
-bool unload(void)
-{
-    // TODO
-    for (int i = 0; i < N; i++)
-    {
-        node *tmp = table[i];
-        node *cursor = table[i];
-        while (cursor != NULL)
-        {
-            cursor = cursor->next;
-            free(tmp);
-            tmp = cursor;
-        }
-    }
-    return true;
-}
+// Unloads dictionar
