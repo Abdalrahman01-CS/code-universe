@@ -13,6 +13,8 @@ typedef struct node
     struct node *next;
 } node;
 
+
+
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
@@ -37,6 +39,10 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    for (int i = 0; i < N; i++)
+    {
+        table[i] = NULL;
+    }
     FILE *dict_file=fopen(dictionary, "r");
     if (dict_file == NULL)
     {
@@ -46,11 +52,13 @@ bool load(const char *dictionary)
     char buffer[45];
    while (fscanf(dict_file, "%s", buffer))
    {
-        node *word = malloc(sizeof(node));
+        node *new_word = malloc(sizeof(node));
         int hash_value=hash(buffer);
-        word
+        strcpy(new_word->word, buffer);
+        new_word->next=table[hash_value];
+        table[hash_value]= new_word;
    }
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
