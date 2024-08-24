@@ -75,6 +75,7 @@ bool load(const char *dictionary)
         table[hash_value]= new_word;
         num_words++;
    }
+   fclose(dict_file);
     return true;
 }
 
