@@ -1,10 +1,10 @@
 // Implements a dictionary's functionality
-#include<stdlib.h>
-#include<string.h>
-#include<strings.h>
-#include<stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -27,9 +27,9 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    int hash_value=hash(word);
-    node *cursor=table[hash_value];
-    while(cursor!=NULL)
+    int hash_value = hash(word);
+    node *cursor = table[hash_value];
+    while (cursor != NULL)
     {
 
         if (strcasecmp(cursor->word, word) == 0)
@@ -39,7 +39,6 @@ bool check(const char *word)
         else
         {
             cursor = cursor->next;
-
         }
     }
     return false;
@@ -60,23 +59,23 @@ bool load(const char *dictionary)
     {
         table[i] = NULL;
     }
-    FILE *dict_file=fopen(dictionary, "r");
+    FILE *dict_file = fopen(dictionary, "r");
     if (dict_file == NULL)
     {
         printf("was not able to open dictionary\n");
         return false;
     }
     char buffer[45];
-   while (fscanf(dict_file, "%s", buffer)!=EOF)
-   {
+    while (fscanf(dict_file, "%s", buffer) != EOF)
+    {
         node *new_word = malloc(sizeof(node));
-        int hash_value=hash(buffer);
+        int hash_value = hash(buffer);
         strcpy(new_word->word, buffer);
-        new_word->next=table[hash_value];
-        table[hash_value]= new_word;
+        new_word->next = table[hash_value];
+        table[hash_value] = new_word;
         num_words++;
-   }
-   fclose(dict_file);
+    }
+    fclose(dict_file);
     return true;
 }
 
@@ -93,12 +92,13 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        node *tmp=table[i];
-        node *cursor=table[i];
-        while(cursor!=NULL)
+        node *tmp = table[i];
+        node *cursor = table[i];
+        while (cursor != NULL)
         {
-cursor= cursor->next;
-free(tmp);
+            cursor = cursor->next;
+            free(tmp);
+            tmp = cursor;
         }
     }
     return true;
