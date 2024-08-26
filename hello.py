@@ -1,1 +1,1 @@
-print("hello, world")
+answer = input("What's your namem ?")
