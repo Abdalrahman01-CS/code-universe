@@ -1,6 +1,5 @@
 before = input("Before: ")
-print("After:   "
-      )
+print("After:  ", end="")
 for c in before:
-    print(c)
-
+    print(c.upper(), end="")
+print(end="\n")
