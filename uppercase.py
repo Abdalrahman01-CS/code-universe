@@ -1,5 +1,6 @@
 before = input("Before: ")
-print("After:   ")
+print("After:   "
+      )
 for c in before:
     print(c)
 
