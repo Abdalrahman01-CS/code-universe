@@ -1,6 +1,6 @@
 s = input("Do you agree? ")
 
-if s == 'Y' or s == 'y':
+if s == 'Y' and s == 'Y':
     print("Agreed")
-elif s== 'N' or s == 'n':
+elif s == 'N' or s == 'n':
     print("Disagreed")
