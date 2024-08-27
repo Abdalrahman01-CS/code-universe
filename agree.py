@@ -4,5 +4,5 @@ s = s.lower()
 
 if s in ["y", "yes"]:
     print("Agreed")
-elif s == 'N' or s == 'n':
+elif s in ["n", "no"]:
     print("Disagreed")
