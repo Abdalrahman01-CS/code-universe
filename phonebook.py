@@ -6,8 +6,8 @@ for n in names:
     if name == n:
         print("Found")
         break
-
-print("Not found")
+else:
+    print("Not found")
 
 
 
