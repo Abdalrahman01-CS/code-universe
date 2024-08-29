@@ -1,2 +1,6 @@
-for i in range(3):
-    print("#", end="")
+from cs50 import get_int
+
+while True:
+    n = get_int("Height: ")
+    if n < 0:
+        continue
