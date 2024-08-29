@@ -6,5 +6,7 @@ for n in names:
     if name == n:
         print("Found")
         break
-    elif:
-        print("Not found")
+
+print("Not found")
+
+
