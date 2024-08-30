@@ -1,3 +1,4 @@
 people = [
-    {"name":}
+    {"name":
+    }
 ]
