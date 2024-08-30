@@ -7,7 +7,7 @@ people = {
 name = input("Name: ")
 
 if name in people:
-    print(f"Found {people["name']}")
+    print(f"Found {people['name']}")
 else:
     print("Not found")
 
