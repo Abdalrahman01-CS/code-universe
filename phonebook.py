@@ -6,11 +6,8 @@ people = {
 
 name = input("Name: ")
 
-for person in people:
-    if person["name"] == name:
-        number = person["number"]
-        print(f"Found {number}")
-        break
+if name in people:
+    print(f"Found {people["name']}")
 else:
     print("Not found")
 
