@@ -1,4 +1,3 @@
 people = [
-    {"name":
-    }
+    {"name": "Abdo", "number": "}
 ]
