@@ -1,3 +1,4 @@
 import cowsay
 
-cowsay.cow("This is CS50")
+name = input("What's your nmae? ")
+cowsay.cow(f"hello, {name}")
