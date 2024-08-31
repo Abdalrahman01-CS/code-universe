@@ -7,13 +7,13 @@ while True:
 
 total_cents = int(change * 100)
 
-quarters = total_cents / 25
+quarters = int(total_cents / 25)
 total_cents -= quarters * 25
 
-dimes = total_cents / 10
+dimes = int(total_cents / 10)
 total_cents -= dimes * 10
 
-nickles = total_cents / 5
+nickles = int(total_cents / 5)
 total_cents -= nickles * 5
 
 pennies = total_cents
