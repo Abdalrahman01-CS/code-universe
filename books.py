@@ -6,7 +6,8 @@ for i in range(3):
     book["title"] = input("Enter a title: ")
     books.append(book)
 
-
+for book in books:
+    print(book)
 
 
 
