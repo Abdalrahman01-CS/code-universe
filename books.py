@@ -7,7 +7,7 @@ for i in range(3):
     books.append(book)
 
 for book in books:
-    print(f"{book["author"]} wrote book.")
+    print(f"{book["title"]} Written by {book["author"]}")
 
 
 
