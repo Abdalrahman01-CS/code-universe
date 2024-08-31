@@ -1,4 +1,4 @@
 import qrcode
 
 img = qrcode.make("https://atqcaviation.com")
-img.save("qr.jpeg", "JPEG")
+img.save("qr.png", "PNG")
