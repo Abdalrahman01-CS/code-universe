@@ -5,5 +5,6 @@ while True:
     if height > 0:
         break
 for level in range(height):
+    print((height - level - 1) * " ", end="")
     print((level + 1) * "#")
 
