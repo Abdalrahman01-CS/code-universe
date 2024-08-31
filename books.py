@@ -2,4 +2,5 @@ books = []
 
 for i in range(3):
     book = dict()
-    book["author"] = "Margaret wise
+    book["author"] = "Margaret Wise Brown"
+    
