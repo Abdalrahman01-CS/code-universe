@@ -1,5 +1,5 @@
-from sys import argv
+import sys
 
-if len(argv) != 2:
+if len(sys.argv) != 2:
     print("Missing command-line argument")
-    sys.exist
+    sys.exit()
