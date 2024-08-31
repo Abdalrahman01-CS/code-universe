@@ -4,5 +4,6 @@ while True:
     height = get_int("Height: ")
     if height > 0:
         break
-for height in 
+for level in height:
+    print((level + 1) * "#")
 
