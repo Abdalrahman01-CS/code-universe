@@ -1,3 +1,2 @@
-text = "In the great green room"
-words = text.split()
-print(words[1:])
+text = "In the great green room" 
+print(text[3:])
