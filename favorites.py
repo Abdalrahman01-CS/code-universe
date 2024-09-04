@@ -6,4 +6,3 @@ with open("favorites.csv") as file:
     for row in reader:
         favorite = row[1]
         print(favorite)
-
