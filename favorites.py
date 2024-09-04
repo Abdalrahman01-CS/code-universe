@@ -10,7 +10,7 @@ for row in reader:
     favorite = row["language"]
     counts[favorite] += 1
 
-for favorite, counn in sorted(counts, key=counts.get, reverse=True):
-    print(f"{favorite}: {counts[favorite]}")
+for favorite, count in counts.most_common():
+    print(f"{favorite}: {count}")
 
 
