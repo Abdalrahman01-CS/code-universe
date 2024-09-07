@@ -1,2 +1,9 @@
 ENERGY
-Average energy of music is 0
+Average energy of music is 0.659
+
+VALENCE
+Average valence of music is 0.484
+
+DANCEABILITY
+Average danceability of music is 0.716
+
