@@ -7,6 +7,7 @@ SELECT FROM
 WHERE year = 2021 AND month = 7 AND day = 28 AND transcript LIKE '%bakery%';
 
 SELECT bakery_security_logs.activity
+
 FROM
 JOIN ON
 WHERE
