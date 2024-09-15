@@ -41,7 +41,7 @@
                 // Check free response submission
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector('input');
-                    if (input.value === 'Switzerland') {
+                    if (input.value === 'Switzerland' || input.value === 'switzerland') {
                         input.style.backgroundColor = 'green';
                         input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                     }
