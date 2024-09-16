@@ -4,6 +4,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    name = request.args["name"]
+    name = request.args["n"]
     return render_template("index.html", placeholder=name)
 
