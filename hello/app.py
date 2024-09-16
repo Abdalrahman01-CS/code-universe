@@ -6,3 +6,4 @@ app = Flask(__name__)
 def index():
     name = request.args["name"]
     return render_template("index.html", placeholder=name)
+
