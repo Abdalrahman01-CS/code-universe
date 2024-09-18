@@ -11,4 +11,6 @@ def index():
 def register():
     if not request.form.get("name"):
         return "failure"
+    elif not request.form.get("sport"):
+        return "failure"
     return "success"
