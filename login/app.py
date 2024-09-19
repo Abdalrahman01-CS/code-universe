@@ -13,7 +13,7 @@ def index():
     return render_template("index.html", name=session.get("name"))
 
 
-@app.route("/login")
+@app.route("/login", methods=["POST"])
 def login():
     if request.method == "POST":
         session["name"] = request.form.get("name")
