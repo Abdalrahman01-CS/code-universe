@@ -36,7 +36,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-     user_id = session["user_id"]
+    user_id = session["user_id"]
 
     transactions_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id=?", user_id)
     cash_db = db.execute("SELECT cash FROM users WHERE id=?", user_id)
@@ -82,11 +82,13 @@ def buy():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)",
+                   user_id, stock["symbol"], shares, stock["price"], date)
 
         flash("Bought!")
 
         return redirect("/")
+
 
 @app.route("/history")
 @login_required
@@ -191,7 +193,8 @@ def register():
         hash = generate_password_hash(password)
 
         try:
-            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+            new_user = db.execute(
+                "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         except:
             return apology("Username already exist")
 
