@@ -47,9 +47,18 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
 
-        
+        if not symbol:
+            return apology("Please Enter a Symbol")
+
+        stock = lookup(symbol.upper())
+
+        if stock == None:
+            return apology("Symbol Does Not Exist")
+
+        if shares < 0:
+            return apology("Share Not Allowed")
 
 
 
