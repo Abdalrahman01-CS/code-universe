@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="/static/styles.css" rel="stylesheet">
         <title>Birthdays</title>
     </head>
+
     <body>
         <div class="header">
             <h1>Birthdays</h1>
@@ -36,14 +38,15 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for birthday in birthdays %}
-                        <tr>
-                            <td></td>
-                            <td>/</td>
-                        </tr>
-                    {% endfor %}
+                            <tr>
+                                <td></td>
+                                <td>/</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
     </body>
+
 </html>
