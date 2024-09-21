@@ -127,8 +127,16 @@ def register():
 
         if not confirmation:
             return apology("Please Enter a Confirmation")
+
         if password != confirmation:
-            return apology(")
+            return apology("Passwords Do Not Match")
+
+        hash = generate_password_hash(password)
+
+        try:
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        except:
+            return apology("Username already exist")
 
 
 @app.route("/sell", methods=["GET", "POST"])
