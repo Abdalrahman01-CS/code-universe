@@ -242,7 +242,7 @@ def sell():
         date = datetime.datetime.now()
 
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)",
-                   user_id, stock["symbol"], shares, stock["price"], date)
+                   user_id, stock["symbol"], (-1)*shares, stock["price"], date)
 
         flash("Sold!")
 
