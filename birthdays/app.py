@@ -59,6 +59,11 @@ db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, mon
 
         # TODO: Display the entries in the database on index.html
 
+        # Query for all birthdays
+birthdays = db.execute("SELECT * FROM birthdays")
+
+# Render birthdays page
+return render_template("index.html", birthdays=birthdays)
         return render_template("index.html")
 
 
