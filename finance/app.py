@@ -38,7 +38,8 @@ def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
 
-    transactions_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id=? GROUP BY symbol", user_id)
+    transactions_db = db.execute(
+        "SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id=? GROUP BY symbol", user_id)
     cash_db = db.execute("SELECT cash FROM users WHERE id=?", user_id)
     cash = cash_db[0]["cash"]
 
@@ -207,7 +208,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-     if request.method == "GET":
+    if request.method == "GET":
         user_id = session["user_id"]
-        symbols_user = db.execute("SELECT symbol FROM transaction WHERE user_id=? HAVING SUM(shares) > 0", id=user_id)
+        symbols_user = db.execute(
+            "SELECT symbol FROM transaction WHERE user_id=? HAVING SUM(shares) > 0", id=user_id)
         return render_template("sell.html", symbol=[row["symbol"] for row in rows])
