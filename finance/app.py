@@ -45,7 +45,6 @@ def buy():
     return apology("TODO")
 
 
-
 @app.route("/history")
 @login_required
 def history():
@@ -118,7 +117,7 @@ def register():
     else:
         username = request.form.get("username")
         password = request.form.get("password")
-
+        confirmation = request.form.get("confirmation")
 
 
 @app.route("/sell", methods=["GET", "POST"])
