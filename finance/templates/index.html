@@ -5,15 +5,15 @@
 {% endblock %}
 
 {% block main %}
-    <table>
+        <table>
         <tr>
-        <th>Symbol</th>
-        <th>Shares</th>
-        <th>Price</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
         </tr>
 
             {% for row in database %}
-                <tr>
+                <tr>{{ row["symbol"] }}</tr>
             {% endfor %}
 
     </table>
