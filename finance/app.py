@@ -119,7 +119,7 @@ def quote():
         if stock == None:
             return apology("Symbol Does Not Exist")
 
-        return render_templates("quote.html", name=stock["name"], price=stock["price"], symbol=stock["symbol"])
+        return render_template("quote.html", name=stock["name"], price=stock["price"], symbol=stock["symbol"])
 
 
 @app.route("/register", methods=["GET", "POST"])
