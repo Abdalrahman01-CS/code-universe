@@ -119,6 +119,9 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
+        if not username:
+            return apology("Please Enter a Username")
+
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
