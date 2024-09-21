@@ -26,8 +26,6 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        # TODO: Add the user's entry into the database
-        # Access form data
         name = request.form.get("name")
     if not name:
         return redirect("/")
@@ -53,13 +51,16 @@ def index():
         return redirect("/")
 
 
-# Insert data into database
 db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
         return redirect("/")
 
     else:
+        birthdays = db.execute("SELECT * FROM birthdays")
 
-        # TODO: Display the entries in the database on index.html
+
+return render_template("index.html", birthdays=birthdays)
+
+
 
                 return render_template("index.html")
 
