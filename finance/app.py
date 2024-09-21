@@ -122,6 +122,12 @@ def register():
         if not username:
             return apology("Please Enter a Username")
 
+        if not password:
+            return apology("Please Enter a Password")
+
+        if not confirmation:
+            return apology("Please Enter a Username")
+
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
