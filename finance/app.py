@@ -207,4 +207,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-     
+     if request.method == "GET":
+        user_id = session["user_id"]
+        symbols_user = db.execute("SELECT symbol FROM transaction WHERE user_id=? HAVING SUM(shares) > 0", id=user_id)
+        return render_template("sell.html", symbol=[row["symbol"] for row in rows])
