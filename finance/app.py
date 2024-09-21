@@ -95,7 +95,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    user_id = session["user_id"]
+    transactions_db = db.execute("SELECT * FROM transactions WHERE user_id=:id", id=user_id)
+    return render_template("history.html", transactions=transactions_db)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -210,7 +212,8 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         user_id = session["user_id"]
-        symbols_user = db.execute("SELECT symbol FROM transactions WHERE user_id=:id GROUP BY symbol HAVING SUM(shares) > 0", id=user_id)
+        symbols_user = db.execute(
+            "SELECT symbol FROM transactions WHERE user_id=:id GROUP BY symbol HAVING SUM(shares) > 0", id=user_id)
         return render_template("sell.html", symbol=[row["symbol"] for row in symbols_user])
 
     else:
@@ -234,7 +237,8 @@ def sell():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id=:id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        user_shares = db.execute("SELECT shares FROM transaction WHERE user_id=:id AND symbol=:symbol GROUP BY symbol", id=user_id, symbol=symbol)
+        user_shares = db.execute(
+            "SELECT shares FROM transaction WHERE user_id=:id AND symbol=:symbol GROUP BY symbol", id=user_id, symbol=symbol)
         user_shares_real = user_shares[0]["shares"]
 
         if shares > user_shares_real:
@@ -252,4 +256,3 @@ def sell():
         flash("Sold!")
 
         return redirect("/")
-
