@@ -111,6 +111,7 @@ def quote():
 
     else:
         symbol = request.form.get("symbol")
+
         if not symbol:
             return apology("Please Enter a Symbol")
 
@@ -119,7 +120,7 @@ def quote():
         if stock == None:
             return apology("Symbol Does Not Exist")
 
-        return render_template("quote.html", name=stock["name"], price=stock["price"], symbol=stock["symbol"])
+        return render_template("quoted.html", name=stock["name"], price=stock["price"], symbol=stock["symbol"])
 
 
 @app.route("/register", methods=["GET", "POST"])
