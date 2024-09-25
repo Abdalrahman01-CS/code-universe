@@ -25,4 +25,8 @@ nav .navbar-brand .green
 {
     width: 10%;
 }
- 
+th, td
+{
+    padding: 15px;
+}
+
