@@ -8,10 +8,9 @@
     <table>
         <thead>
             <tr>
-                <th>Symbol</th>
-                <th>Shares</th>
+                <th>Item</th>
+                <th>QTY</th>
                 <th>Price</th>
-                <th>Date</th>
             </tr>
         </thead>
 
@@ -19,8 +18,7 @@
             <tr>
                 <td>{{ row["symbol"] }}</td>
                 <td>{{ row["shares"] }}</td>
-                <td>{{ row["price"] }}</td>
-                <td>{{ row["date"] }}</td>
+                <td>{{ row["price"] }} $</td>
             </tr>
         {% endfor %}
 
