@@ -255,9 +255,14 @@ def sell():
 
         flash("Sold!")
 
-
         return redirect("/")
 
-
+@app.route("/cart")
+@login_required
+def cart():
+    """Show cart of items"""
+    user_id = session["user_id"]
+    transactions_db = db.execute("SELECT * FROM transactions WHERE user_id=:id", id=user_id)
+    return render_template("history.html", transactions=transactions_db)
 
 
