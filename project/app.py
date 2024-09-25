@@ -257,6 +257,7 @@ def sell():
 
         return redirect("/")
 
+
 @app.route("/cart")
 @login_required
 def cart():
